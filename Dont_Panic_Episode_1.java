@@ -34,7 +34,7 @@ class Player {
 
             if(cloneFloor!=-1 
                && cloneDirection(
-                   ((exitFloor==cloneFloor) ? exitPos : numElevators[cloneFloor]),
+                   (exitFloor==cloneFloor) ? exitPos : numElevators[cloneFloor],
                    clonePos, 
                    direction)){
                 System.out.println("BLOCK");

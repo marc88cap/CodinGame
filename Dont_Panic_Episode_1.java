@@ -56,11 +56,6 @@ class Player {
     }
     
     private static boolean checkDirection(String direction, String expected){
-         if(direction.equals(expected)){
-            return false;
-         }
-         else{
-            return true;
-         }
+         if(direction.equals(expected)) return false; else return true;
     }
 }

@@ -32,31 +32,35 @@ class Player {
             int clonePos = in.nextInt(); // position of the leading clone on its floor
             String direction = in.next(); // direction of the leading clone: LEFT or RIGHT
 
-            if(cloneFloor!=-1 && cloneDirection(((exitFloor==cloneFloor) ? exitPos :numElevators[cloneFloor]), clonePos, direction)){
-             System.out.println("BLOCK");
+            if(cloneFloor!=-1 
+               && cloneDirection(
+                   ((exitFloor==cloneFloor) ? exitPos : numElevators[cloneFloor]),
+                   clonePos, 
+                   direction)){
+                System.out.println("BLOCK");
             }
             else{
-             System.out.println("WAIT");   
+                System.out.println("WAIT");   
             }
         }
     }
     
     private static boolean cloneDirection(int exitFloorPos, int clonePos, String direction){
         if(exitFloorPos>clonePos){
-          return checkDirection(direction, "RIGHT");
+            return checkDirection(direction, "RIGHT");
          }
          else if(exitFloorPos<clonePos){
-          return checkDirection(direction, "LEFT");
+            return checkDirection(direction, "LEFT");
          }
          return false;
     }
     
     private static boolean checkDirection(String direction, String expected){
-     if(direction.equals(expected)){
-      return false;
-     }
-     else{
-      return true;
-     }
+         if(direction.equals(expected)){
+            return false;
+         }
+         else{
+            return true;
+         }
     }
 }

@@ -11,8 +11,8 @@ class Player {
     private static int R = 0;
     private static int U = 0;
     private static int D = 0;
-    static int X0 = 0;
-    static int Y0 = 0;
+    private static int X0 = 0;
+    private static int Y0 = 0;
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         R = in.nextInt(); // width of the building.
